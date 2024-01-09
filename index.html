@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bebas+Neue&family=Borel&family=Montserrat:wght@400;500;600;700&family=Pacifico&family=Poppins&family=Sometype+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bebas+Neue&family=Borel&family=Montserrat:wght@400;500;600;700&family=Pacifico&family=Poppins&family=Righteous&family=Sometype+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bebas+Neue&family=Borel&family=Bree+Serif&family=Montserrat:wght@400;500;600;700&family=Pacifico&family=Poppins&family=Righteous&family=Sometype+Mono:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Bebas+Neue&family=Borel&family=Bree+Serif&family=Montserrat:wght@400;500;600;700&family=PT+Sans+Caption&family=Pacifico&family=Poppins&family=Righteous&family=Sometype+Mono:wght@500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center mt-4">Bookmarker</h1>
+      <div class="item mx-auto"></div>
+
+      <div class="content mt-5 mx-auto pb-4">
+        <div
+          class="text-gradient content-title d-flex justify-content-center pt-4"
+        >
+          <i class="fa-solid fa-bookmark text-success fs-4 mt-2 me-2"></i>
+          <h2>Bookmark your favorite sites</h2>
+          <i class="fa-solid fa-bookmark text-success fs-4 mt-2 ms-2"></i>
+        </div>
+
+        <div class="mb-3 mt-4">
+          <label for="siteName" class="form-label fw-bold">
+            <i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label
+          >
+          <input
+            type="text"
+            name="siteName"
+            id="siteName"
+            class="form-control"
+            placeholder="Bookmark Name"
+            aria-describedby="helpId"
+            oninput="validateSiteName()"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="siteUrl" class="form-label fw-bold">
+            <i class="fa-solid fa-link pe-2"></i> Site URL</label
+          >
+          <input
+            type="text"
+            name="siteUrl"
+            id="siteUrl"
+            class="form-control"
+            placeholder="Website URL"
+            aria-describedby="helpId"
+            oninput="validateSiteUrl()"
+          />
+        </div>
+
+        <div class="text-center">
+          <button class="Btn btn btn-danger" onclick="createSite()">
+            Submit
+          </button>
+        </div>
+      </div>
+
+      <table class="table-show mt-4 table mx-auto">
+        <thead>
+          <tr>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+
+        <tbody id="data"></tbody>
+      </table>
+    </div>
+
+    <div
+      id="error" class="errorBoxContainer d-none d-flex justify-content-center align-items-center  bg-black bg-opacity-50 position-absolute top-0 start-0 end-0 bottom-0"
+    >
+      <div class="errorBox ">
+        <div class="card w-50">
+          <div class="card-body">
+         <div class="icons py-3 position-relative">
+            <i class="fa-solid fs-6 fa-circle" style="color: #F15F5D;"></i>
+            <i class="fa-solid fs-6 fa-circle"style="color: #FEBE2E;"></i>
+            <i class="fa-solid fs-6 fa-circle"style="color: #4DB748;"></i>
+          <a href="">  <i class="fa-solid fs-3 fa-xmark position-absolute end-0"style="color: #000000;"></i></a>
+        </div>
+            <p class="card-text">
+              Site Name or Url is not valid, Please follow the rules below :
+            </p>
+            <div class="d-flex special">
+
+                <i class="fa-regular fa-circle-right p-2"></i>
+                <p>Site name must contain at least 3 characters</p>
+            </div>
+            <div class="d-flex special">
+
+                <i class="fa-regular fa-circle-right p-2"></i>
+                <p>Site URL must be a valid one</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

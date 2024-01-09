@@ -1,0 +1,106 @@
+body{
+    background-color: #F7ECDE;
+}
+
+::selection {
+    background: #FEC260;
+  }
+
+
+  
+h1{
+
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    font-weight: 500;
+    position: relative;
+    top: 30px;
+}
+
+.item{
+
+    width: 270px;
+    height: 20px;
+    background-color: #FEC260;
+   
+}
+.content h2{
+
+    font-family: 'Righteous', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+
+}
+
+.text-gradient{
+    background: linear-gradient(to right, #3EA55B 30%, #B3AC49 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content{
+    width: 95%;
+    border-top: dotted 2px black;
+    border-bottom: dotted 2px black;
+}
+
+.Btn{
+
+    background-color: #D1512D;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+
+.table-show{
+
+    width: 95%;
+}
+
+.visit-btn{
+
+   background-color: #8A9E23;
+   color: white;
+   border: solid 1px #8A9E23 ;
+   border-radius: 5px;
+   padding: 6px 10px;
+   transition: all 0.5s;
+}
+
+.visit-btn:hover{
+    background-color: green;
+    border: solid 1px green ;
+}
+
+input[type=text]:focus{
+    outline: none;      /* Remove default outline and use border or box-shadow */
+    box-shadow: 0 0 3px 3px #FEC260; /* Full freedom. (works also with border-radius) */
+  }
+
+
+
+.errorBox{
+
+    width: 65%;
+    height: 400px;
+    position: absolute;
+    right: 50px;
+
+}
+
+.errorBox p {
+    font-size: 21px;
+    font-weight: 400;
+    font-family: 'Bree Serif', serif;
+}
+
+.errorBox i{
+    color: #bb4120;
+}
+
+.errorBox .special p{
+
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'PT Sans Caption', sans-serif;
+}
